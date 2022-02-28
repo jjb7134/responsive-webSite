@@ -320,6 +320,13 @@ img {
     margin-bottom: var(--mb-0-75);
 }
 
+.home__img {
+    width: 200px;
+    border-radius: 10% 85% 85% 85%;
+    justify-self: center;
+    align-self: center;
+}
+
 .home__description {
     margin-bottom: var(--mb-2);
 }
@@ -402,8 +409,7 @@ img {
 }
 
 /*==================== ABOUT ====================*/
-.about__img,
-.home__img {
+.about__img {
     width: 200px;
     border-radius: .5rem;
     justify-self: center;
@@ -1023,8 +1029,8 @@ img {
         padding-top: 5.5rem;
         column-gap: 2rem;
     }
-    .home__blob {
-        width: 270px;
+    .home__img {
+        width: 450px;
     }
     .home__scroll {
         display: block;
