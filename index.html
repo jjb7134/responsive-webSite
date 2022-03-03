@@ -20,7 +20,7 @@
         <!--==================== HEADER ====================-->
         <header class="header" id="header">
             <nav class="nav container">
-                <a href="#" class="nav__logo">Firely</a>
+                <a href="#" class="nav__logo">Firely Zone</a>
 
                 <div class="nav__menu" id="nav-menu">
                     <ul class="nav__list grid">
@@ -30,18 +30,23 @@
                             </a>
                         </li>
                         <li class="nav__item">
-                            <a href="#about" class="nav__link">
-                                <i class="uil uil-user nav__icon"></i> About
-                            </a>
-                        </li>
-                        <li class="nav__item">
                             <a href="#skills" class="nav__link">
                                 <i class="uil uil-brackets-curly nav__icon"></i> Skills
                             </a>
                         </li>
                         <li class="nav__item">
+                            <a href="#qualification" class="nav__link">
+                                <i class="uil uil-bag nav__icon"></i> Qualification
+                            </a>
+                        </li>
+                        <li class="nav__item">
                             <a href="#portfolio" class="nav__link">
                                 <i class="uil uil-files-landscapes nav__icon"></i> Portfolio
+                            </a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="about.html" class="nav__link">
+                                <i class="uil uil-user nav__icon"></i> About
                             </a>
                         </li>
                     </ul>
@@ -65,11 +70,8 @@
                 <div class="home__container container grid">
                     <div class="home__content grid">
                         <div class="home__social">
-                            <a href="#" target="_blank" class="home__social-icon">
-                                <i class="uil uil-linkedin-alt"></i>
-                            </a>
-                            <a href="#" target="_blank" class="home__social-icon">
-                                <i class="uil uil-basketball"></i>
+                            <a href="https://jjb7134.github.io/" target="_blank" class="home__social-icon">
+                                <i class="uil uil-edit"></i>
                             </a>
                             <a href="https://github.com/jjb7134" target="_blank" class="home__social-icon">
                                 <i class="uil uil-github-alt"></i>
@@ -85,9 +87,28 @@
                             <h1 class="home__title">Welcome Firely ground!!</h1>
                             <!-- <h3 class="home__subtitle">Frontend developer</h3> -->
                             <p class="home__description">this page is my portfolio</p>
-                            <a href="#contact" class="button button--flex">
+                            <a class="button button--flex contactMe__modal-button contactMe__button" style="cursor: pointer;">
                                 Contact Me <i class="uil uil-message button__icon"></i>
                             </a>
+                            <!-- contactMe Modal 팝업으로 하자 -->
+                            <div class="contactMe__modal">
+                                <div class="contactMe__modal-content">
+                                    <h3 class="contactMe__modal-title">Contact Me!</h4>
+                                    <i class="uil uil-times contactMe__modal-close"></i>
+
+                                    <ul class="contactMe__modal-contacts grid">
+                                        <li class="contactMe__modal-contact">
+                                            <i class="uil uil-phone-alt contactMe__modal-icon"></i>
+                                            <p style="padding-left: 10px;">010-9412-7398</p>
+                                        </li>
+                                        <li class="contactMe__modal-contact">
+                                            <i class="uil uil-envelope-alt contactMe__modal-icon"></i>
+                                            <p style="padding-left: 10px;">firely95@naver.com</p>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+
                         </div>
                     </div>
                     <div class="home__scroll">
@@ -101,28 +122,29 @@
             </section>
 
             <!--==================== ABOUT ====================-->
-            <section class="about section" id="about">
+            <!-- 무경력에 넣기는 어색하니 추후 보완하기로.. -->
+            <!-- <section class="about section" id="about">
                 <h2 class="section__title">About Me</h2>
                 <span class="section__subtitle">My introduction</span>
 
                 <div class="about__container container grid">
                     <img src="img/babySide.jpg" alt="" class="about__img">
                     <div class="about__data">
-                        <p class="about__description">Will be better FE</p>
+                        <p class="about__description">샌애긔 프론트개발자의 험난한 여정...</p>
 
                         <div class="about__info">
                             <div>
-                                <span class="about__info-title">08+</span>
+                                <span class="about__info-title">00+</span>
                                 <span class="about__info-name">Years <br> experience</span>
                             </div>
                             
                             <div>
-                                <span class="about__info-title">20+</span>
+                                <span class="about__info-title">02+</span>
                                 <span class="about__info-name">Completed <br> project</span>
                             </div>
 
                             <div>
-                                <span class="about__info-title">05+</span>
+                                <span class="about__info-title">00+</span>
                                 <span class="about__info-name">Companies <br> worked</span>
                             </div>
                         </div>
@@ -134,7 +156,7 @@
                             </div>
                     </div>
                 </div>
-            </section>
+            </section> -->
 
             <!--==================== SKILLS ====================-->
             <section class="skills section" id="skills">
@@ -199,7 +221,8 @@
                             </div>
                         </div>
                         <!--==================== SKILLS 2 ====================-->
-                        <div class="skills__content skills__close">
+                        <!-- 가물가물+프론트랑 연관X = 빼자 -->
+                        <!-- <div class="skills__content skills__close">
                             <div class="skills__header">
                                 <i class="uil uil-server-network skills__icon"></i>                           
 
@@ -252,13 +275,13 @@
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                        </div> -->
                     </div>
                 </div>
             </section>
 
             <!--==================== QUALIFICATION ====================-->
-            <section class="qualification section">
+            <section class="qualification section" id="qualification">
                 <h2 class="section__title">Qualification</h2>
                 <span class="section__subtitle">My personal journey</span>
                 
@@ -281,7 +304,7 @@
                             <!--==================== QUALIFICATION 1====================-->
                             <div class="qualification__data">
                                 <div>
-                                    <h3 class="qualification__title">Department of Physical Education</h3>
+                                    <h3 class="qualification__title">생활체육학과</h3>
                                     <span class="qualification__subtitle">Konkuk University</span>
                                     <div class="qualification__calendar">
                                         <i class="uil uil-calendar-alt"></i>
@@ -299,8 +322,8 @@
                                 <div></div>
 
                                 <div>
-                                    <span class="qualification__rounder"></span>
-                                    <span class="qualification__line"></span>
+                                    <span class="qualification__rounder"></span> <!-- 점-->
+                                    <!-- <span class="qualification__line"></span> --> <!-- 선-->
                                 </div>
 
                                 <div>
@@ -308,13 +331,13 @@
                                     <span class="qualification__subtitle">KoreaIT</span>
                                     <div class="qualification__calendar">
                                         <i class="uil uil-calendar-alt"></i>
-                                        2014 - 2018
+                                        2021.08 - 2022.01
                                     </div>
                                 </div>
                             </div>
 
                             <!--==================== QUALIFICATION 3====================-->
-                            <div class="qualification__data">
+                            <!-- <div class="qualification__data">
                                 <div>
                                     <h3 class="qualification__title">#</h3>
                                     <span class="qualification__subtitle">#</span>
@@ -326,9 +349,9 @@
 
                                 <div>
                                     <span class="qualification__rounder"></span>
-                                    <!-- <span class="qualification__line"></span> -->
+                                    <span class="qualification__line"></span>
                                 </div>
-                            </div>
+                            </div> -->
                         </div>
                         <!--==================== QUALIFICATION CONTENT 2 ====================-->
                         <div class="qualificaion__content" data-content id="work">
@@ -345,11 +368,11 @@
 
                                 <div>
                                     <span class="qualification__rounder"></span>
-                                    <span class="qualification__line"></span>
+                                    <!-- <span class="qualification__line"></span> -->
                                 </div>
                             </div>
                             <!--==================== QUALIFICATION 2====================-->
-                            <div class="qualification__data">
+                            <!-- <div class="qualification__data">
                                 <div></div>
 
                                 <div>
@@ -365,10 +388,10 @@
                                         2014 - 2018
                                     </div>
                                 </div>
-                            </div>
+                            </div> -->
 
                             <!--==================== QUALIFICATION 3====================-->
-                            <div class="qualification__data">
+                            <!-- <div class="qualification__data">
                                 <div>
                                     <h3 class="qualification__title">#</h3>
                                     <span class="qualification__subtitle">#</span>
@@ -380,25 +403,26 @@
 
                                 <div>
                                     <span class="qualification__rounder"></span>
-                                    <!-- <span class="qualification__line"></span> -->
+                                    <span class="qualification__line"></span>
                                 </div>
-                            </div>
+                            </div> -->
                         </div>
                     </div>        
                 </div>
             </section>
 
             <!--==================== SERVICES ====================-->
-            <section class="services section" id="services">
-                <h2 class="section__title">Services</h2>
-                <span class="section__subtitle">What i offer</span>
+            <!-- 경력이 쌓이면 활용하자!!-->
+            <!-- <section class="services section" id="services">
+                <h2 class="section__title">제 목</h2>
+                <span class="section__subtitle">소 제 목</span>
 
-                <div class="services__container container grid">
+                <div class="services__container container grid"> -->
                     <!--==================== SERVICES 1 ====================-->
-                    <div class="services__content">
+                    <!-- <div class="services__content">
                         <div>
-                        <i class="uil uil-web-grid services__icon"></i>
-                        <h3 class="services__title">UI/UX <br> Designer</h3>
+                            <i class="uil uil-server-network services__icon"></i>
+                        <h3 class="services__title">Backend <br> Developr</h3>
                         </div>  
 
                         <span class="button button--flex button--small button--link services__button">
@@ -427,10 +451,10 @@
                                 </ul>
                             </div>
                         </div>
-                    </div>
+                    </div> -->
 
                     <!--==================== SERVICES 2 ====================-->
-                    <div class="services__content">
+                    <!-- <div class="services__content">
                         <div>
                        <i class="uil uil-arrow services__icon"></i>
                         <h3 class="services__title">Frontend <br> Developr</h3>
@@ -464,7 +488,7 @@
                         </div>
                     </div>
                 </div>
-            </section>
+            </section> -->
 
             <!--==================== PORTFOLIO ====================-->
             <section class="portfolio section" id="portfolio">
@@ -582,16 +606,22 @@
             <div class="footer__bg">
                 <div class="footer__container container grid">
                     <div>
-                        <h1 class="footer__title">JB</h1>
+                        <h1 class="footer__title">Jong Bin</h1>
                         <span class="footer__subtitle">Frontend developer</span>
                     </div>
 
                     <ul class="footer__links">
                         <li>
-                            <a href="#services" class="footer__link">Services</a>
+                            <a href="#skills" class="footer__link">skills</a>
+                        </li>
+                        <li>
+                            <a href="#qualification" class="footer__link">Qualification</a>
                         </li>
                         <li>
                             <a href="#portfolio" class="footer__link">Portfolio</a>
+                        </li>
+                        <li>
+                            <a href="about.html" class="footer__link">About</a>
                         </li>
                     </ul>
 
@@ -601,6 +631,9 @@
                         </a>
                         <a href="https://www.instagram.com/?hl=ko" target="_blank" class="footer__social">
                             <i class="uil uil-instagram"></i>
+                        </a>
+                        <a href="https://jjb7134.github.io/" target="_blank" class="footer__social">
+                            <i class="uil uil-edit"></i>
                         </a>
                     </div>
                 </div>
