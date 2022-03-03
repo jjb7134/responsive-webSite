@@ -29,6 +29,30 @@ function linkAction(){
 }
 navLink.forEach(n => n.addEventListener('click', linkAction))
 
+/*==================== ContactMe Modal ====================*/
+const modalViews = document.querySelectorAll('.contactMe__modal'),
+      modalBtns = document.querySelectorAll('.contactMe__button'),
+      modalCloses = document.querySelectorAll('.contactMe__modal-close')
+
+let modal = function(modalClick){
+    modalViews[modalClick].classList.add('active-modal')
+}
+
+modalBtns.forEach((modalBtn, i) => {
+    modalBtn.addEventListener('click', () =>{
+        modal(i)
+    })
+})
+
+modalCloses.forEach((modalClose) => {
+    modalClose.addEventListener('click', () => {
+        modalViews.forEach((modalView) => {
+            modalView.classList.remove('active-modal')
+        })
+    })
+})
+
+
 /*==================== ACCORDION SKILLS ====================*/
 const skillsContent = document.getElementsByClassName('skills__content'),
       skillsHeader = document.querySelectorAll('.skills__header')
@@ -67,27 +91,27 @@ tabs.forEach(tab =>{
     })
 })
 /*==================== SERVICES MODAL ====================*/
-const modalViews = document.querySelectorAll('.services__modal'),
-      modalBtns = document.querySelectorAll('.services__button'),
-      modalCloses = document.querySelectorAll('.services__modal-close')
+// const modalViews = document.querySelectorAll('.services__modal'),
+//       modalBtns = document.querySelectorAll('.services__button'),
+//       modalCloses = document.querySelectorAll('.services__modal-close')
 
-let modal = function(modalClick){
-    modalViews[modalClick].classList.add('active-modal')
-}
+// let modal = function(modalClick){
+//     modalViews[modalClick].classList.add('active-modal')
+// }
 
-modalBtns.forEach((modalBtn, i) => {
-    modalBtn.addEventListener('click', () =>{
-        modal(i)
-    })
-})
+// modalBtns.forEach((modalBtn, i) => {
+//     modalBtn.addEventListener('click', () =>{
+//         modal(i)
+//     })
+// })
 
-modalCloses.forEach((madalClose) => {
-    madalClose.addEventListener('click', () => {
-        modalViews.forEach((modalView) => {
-            modalView.classList.remove('active-modal')
-        })
-    })
-})
+// modalCloses.forEach((madalClose) => {
+//     madalClose.addEventListener('click', () => {
+//         modalViews.forEach((modalView) => {
+//             modalView.classList.remove('active-modal')
+//         })
+//     })
+// })
 /*==================== PORTFOLIO SWIPER  ====================*/
 let swiper = new Swiper(".portfolio__container", {
     cssMode: true,
