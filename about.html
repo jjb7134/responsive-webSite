@@ -5,10 +5,62 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Me</title>
+    <style>
+        body {
+            background: rgb(36, 37, 37);
+            margin: 10% 5%;
+        }
+        .font {
+            color: rgb(210, 216, 221);
+        }
+        .container {
+            /* max-width: 768px; */
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .grid {
+            display: grid;
+            gap: 15px;
+        }
+        .introduce {
+            grid-template-columns: max-content 1fr ;
+            /* align-items: center; */
+        }
+        .intro__img {
+            width: 300px;
+            height: 400px;
+            border-radius: 50%;
+            order: 1;
+            justify-self: center;
+        }
+        .intro__ment {
+            grid-column: initial;
+        }
+    </style>
 </head>
 <body>
-    <h1>나로 말할거</h1>
-    <p>가트며어어어언~!~!~! <br/> 빠른시일 내에 <span style="color: blueviolet;">
-        <strong>완성</strong></span>하겠습니다...</p>
+    <div class="introduce__container container grid font">
+        <div class="introduce grid">
+         
+            <div class="intro__img">
+                <img src="img/about1.jpg" alt="" class="intro__img">
+            </div>
+
+            <div class="intro__ment">
+                <h1><b>미니멀리즘</b>을 추구합니다.</h1>
+                <p><b>•</b>단순하지만 무게감있어야 합니다.</p>
+                <p><b>•</b>부족해보이지만 필요한건 다 있어야합니다.</p>
+                <p><b>•</b>정교한 필요함을 위해 화려한 불필요함을 최소화합니다.</p>
+                <p><b>•</b></p>
+            </div>
+
+        </div>
+        <div class="more">
+            <div class="intro__subment">
+               <h1>자세히...</h1>
+               <h2>이 공간에 제 소개와 생각을 담겠습니다. </h2>
+           </div>
+        </div>
+    </div>
 </body>
 </html>
