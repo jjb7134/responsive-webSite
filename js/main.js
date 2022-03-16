@@ -53,24 +53,7 @@ modalCloses.forEach((modalClose) => {
 })
 
 
-/*==================== ACCORDION SKILLS ====================*/
-const skillsContent = document.getElementsByClassName('skills__content'),
-      skillsHeader = document.querySelectorAll('.skills__header')
 
-function toggleSkills(){
-    let itemClass = this.parentNode.className
-
-    for(i = 0; i < skillsContent.length; i++){
-        skillsContent[i].className = 'skills__content skills__close'
-    }
-    if(itemClass === 'skills__content skills__close'){
-        this.parentNode.className = 'skills__content skills__open'
-    }
-}
-
-skillsHeader.forEach((el) =>{
-    el.addEventListener('click', toggleSkills)
-})
 /*==================== QUALIFICATION TABS ====================*/
 const tabs = document.querySelectorAll('[data-target]'),
        tabContents = document.querySelectorAll('[data-content]')
@@ -90,47 +73,6 @@ tabs.forEach(tab =>{
         tab.classList.add('qualification__active')
     })
 })
-/*==================== SERVICES MODAL ====================*/
-// const modalViews = document.querySelectorAll('.services__modal'),
-//       modalBtns = document.querySelectorAll('.services__button'),
-//       modalCloses = document.querySelectorAll('.services__modal-close')
-
-// let modal = function(modalClick){
-//     modalViews[modalClick].classList.add('active-modal')
-// }
-
-// modalBtns.forEach((modalBtn, i) => {
-//     modalBtn.addEventListener('click', () =>{
-//         modal(i)
-//     })
-// })
-
-// modalCloses.forEach((madalClose) => {
-//     madalClose.addEventListener('click', () => {
-//         modalViews.forEach((modalView) => {
-//             modalView.classList.remove('active-modal')
-//         })
-//     })
-// })
-/*==================== PORTFOLIO SWIPER  ====================*/
-let swiper = new Swiper(".portfolio__container", {
-    cssMode: true,
-    loop: true,
-
-    navigation: {
-      nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev",
-    },
-    pagination: {
-      el: ".swiper-pagination",
-      clickable: true,
-    },
-    mousewheel: true,
-    keyboard: true,
-});
-
-/*==================== TESTIMONIAL ====================*/
-
 
 /*==================== SCROLL SECTIONS ACTIVE LINK ====================*/
 // 해당페이지 위치할때 아이콘에 호버효과 + 스크롤중 페이지 위치에 아이콘 호버효과
