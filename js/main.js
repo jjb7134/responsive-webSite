@@ -107,36 +107,37 @@ window.addEventListener('scroll', scrollHeader)
 function scrollUp(){
     const scrollUp = document.getElementById('scroll-up');
     // When the scroll is higher than 560 viewport height, add the show-scroll class to the a tag with the scroll-top class
-    if(this.scrollY >= 560) scrollUp.classList.add('show-scroll'); else scrollUp.classList.remove('show-scroll')
+    if(this.scrollY >= 560) scrollUp.classList.add('show-scroll'); 
+    else scrollUp.classList.remove('show-scroll')
 }
 window.addEventListener('scroll', scrollUp)
 
-/*==================== DARK LIGHT THEME ====================*/ 
+/*==================== 다크 모드 ====================*/ 
 const themeButton = document.getElementById('theme-button')
 const darkTheme = 'dark-theme'
 const iconTheme = 'uil-sun'
 
-// Previously selected topic (if user selected)
+// 이전에 선택한 주제(사용자가 선택한 경우)
 const selectedTheme = localStorage.getItem('selected-theme')
 const selectedIcon = localStorage.getItem('selected-icon')
 
-// We obtain the current theme that the interface has by validating the dark-theme class
+// Dark-theme 클래스의 유효성을 검사하여 인터페이스의 현재 테마를 얻습니다.
 const getCurrentTheme = () => document.body.classList.contains(darkTheme) ? 'dark' : 'light'
 const getCurrentIcon = () => themeButton.classList.contains(iconTheme) ? 'uil-moon' : 'uil-sun'
 
-// We validate if the user previously chose a topic
+// 사용자가 이전에 주제를 선택했는지 확인합니다.
 if (selectedTheme) {
-  // If the validation is fulfilled, we ask what the issue was to know if we activated or deactivated the dark
+  // 유효성 검사가 완료되면 어둠을 활성화 또는 비활성화했는지 여부를 알기 위해 문제가 무엇인지 묻습니다.
   document.body.classList[selectedTheme === 'dark' ? 'add' : 'remove'](darkTheme)
   themeButton.classList[selectedIcon === 'uil-moon' ? 'add' : 'remove'](iconTheme)
 }
 
-// Activate / deactivate the theme manually with the button
+// 버튼으로 수동으로 테마 활성화/비활성화
 themeButton.addEventListener('click', () => {
-    // Add or remove the dark / icon theme
+    // 어두운 / 아이콘 테마 추가 또는 제거
     document.body.classList.toggle(darkTheme)
     themeButton.classList.toggle(iconTheme)
-    // We save the theme and the current icon that the user chose
+    // 사용자가 선택한 테마와 현재 아이콘을 저장합니다.
     localStorage.setItem('selected-theme', getCurrentTheme())
     localStorage.setItem('selected-icon', getCurrentIcon())
 })
