@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--==================== UNICONS ====================-->
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+
+    <title>DarkMode</title>
+    <link rel="icon" type="img/icon" href="/img/moon.ico">
+
+    <!--================ CSS ==================-->
+    <style>
+        .container {
+            list-style: none;
+            text-align: center;
+            margin-top: 50%;
+        }
+
+        .dark__button {
+            font-size: 300%;
+            padding: 2%;
+            cursor: pointer;
+        }
+
+        .dark__button:hover {
+            background-color: gray;
+            border-radius: 50%;
+            transition: 0.5s ease;
+        }
+
+        body.dark-mode {
+            background-color: rgb(37, 35, 35);
+            color: rgb(189, 196, 202);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <li>
+            <h1>아이콘을 눌러 테마를 바꿔보세요~!</h1>
+            <h3>라이브러리 화 시키기 위해 노력했습니다ㅎ<br>
+                코드는 깃허브를 확인해주세요
+            </h3>
+            <i class="uil uil-moon dark__button" id="dark-button"></i>
+        </li>
+    </div>
+
+
+    <script>
+        const modeButton = document.getElementById('dark-button')
+        const darkMode = 'dark-mode'
+        const iconMode = 'uil-sun'
+
+        //선택한요소에 대해..
+        const selectedMode = localStorage.getItem('selected-mode')
+        const selectedIcon = localStorage.getItem('selected-icon')
+
+        //유효성 검사 후 현재 테마 얻기
+        const getCurrentMode = () => document.body.classList.contains(darkMode) ? 'dark' : 'light'
+        const getCurrentIcon = () => modeButton.classList.contains(iconMode) ? 'uil-moon' : 'uil-sun'
+
+        //누적된 값을 기억시키자
+        if(selectedMode) {
+            document.body.classList[selectedMode === 'dark' ? 'add' : 'remove'](darkMode)
+            modeButton.classList[selectedIcon === 'uil-moon' ? 'add' : 'remove'](iconMode)
+        }
+
+        // 이벤트 리스너
+        modeButton.addEventListener('click', () => {
+            //클릭하면 아이콘 변경해주기
+            document.body.classList.toggle(darkMode)
+            modeButton.classList.toggle(iconMode)
+            // 선택한 테마,아이콘 누적
+            localStorage.setItem('selected-mode', getCurrentMode())
+            localStorage.setItem('selected-icon', getCurrentIcon())
+        })
+
+    </script>
+</body>
+</html>
