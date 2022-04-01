@@ -16,19 +16,25 @@
             color: rgb(190, 195, 200);
         }
 
-        .intro {
+        .title {
             text-align: center;
         }
 
         .text {
+            width: 200px;
             list-style: none;
+            background: gray;
+            border-radius: 5px;
+            box-shadow: 2px;
+            margin: 10px auto;
+            padding-left: 10px;
+            align-items: center;
         }
 
         .slide__container {
-            max-width: 1000px;
+            max-width: 600px;
             position: relative;
             margin: auto;
-            /* height: 40%; */
         }
 
         .slide {
@@ -82,37 +88,39 @@
 <body>
     <!-- ============== 설명 =================-->
     <section class="intro">
-        <h1 class="title">기능(이하 내용은 팝업으로 숨기기)</h1>
+        <h1 class="title">기능</h1>
         <ul class="text">
-            <li class="list">arrow 버튼으로 넘기기</li>
-            <li class="list">마우스클릭으로 넘기기</li>
-            <li class="list">하단 dot으로 넘기기</li>
-            <li class="list">자동 넘기기</li>
+            <li class="list">1. arrow 버튼으로 넘기기</li>
+            <li class="list">2. 하단 dot으로 넘기기</li>
+            <li class="list">3. 마우스클릭으로 넘기기</li>
+            <li class="list">4. 자동 넘기기</li>
         </ul>
     </section>
 
     <!-- ============== 슬라이드 쇼 =================-->
-    <section class="slideShow">
-        <div class="slide__container">
-            <!--========== 1번째 ===============-->
-            <div class="slide fade">
-                <img src="../img/about1.jpg" alt="">
+    <section class="slider" >
+        <div class="slideShow">
+            <div class="slide__container" >
+                <!--========== 1번째 ===============-->
+                <div class="slide fade">
+                    <img src="../img/about1.jpg" alt="">
+                </div>
+                <!--========== 2번째 ===============-->
+                <div class="slide fade">
+                    <img src="../img/babyFront.jpg" alt=""  >
+                </div>
+                <!--========== 3번째 ===============-->
+                <div class="slide fade">
+                    <img src="../img/babySide.jpg" alt="" > 
+                </div>
+                <!--========== 4번째 ===============-->
+                <div class="slide fade" >
+                    <img src="../img/darkmode.png" alt="" > 
+                </div>
+    
+                <i class="uil uil-angle-left-b prev" onclick="plusSlides(-1)"></i>
+                <i class="uil uil-angle-right-b next" onclick="plusSlides(1)"></i>
             </div>
-            <!--========== 2번째 ===============-->
-            <div class="slide fade">
-                <img src="../img/babyFront.jpg" alt="">
-            </div>
-            <!--========== 3번째 ===============-->
-            <div class="slide fade">
-                <img src="../img/babySide.jpg" alt="">
-            </div>
-            <!--========== 4번째 ===============-->
-            <div class="slide fade">
-                <img src="../img/darkmode.png" alt="">
-            </div>
-
-            <i class="uil uil-angle-left-b prev" onclick="plusSlides(-1)"></i>
-            <i class="uil uil-angle-right-b next" onclick="plusSlides(1)"></i>
         </div>
         <br>
 
@@ -125,7 +133,9 @@
     </section>
 
     <script>
-        //초기값 설정
+        // ===== arrow,bullet으로 슬라이드 넘기기 구현 =====
+        {
+            //초기값 설정
         let slideIndex = 1;
         showSlides(slideIndex);
 
@@ -156,6 +166,9 @@
             slides[slideIndex-1].style.display = "block";
             dots[slideIndex-1].className += " active";
         }
+}
+
+       
     </script>
 </body>
 </html>
