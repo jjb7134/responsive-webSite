@@ -18,33 +18,36 @@
             margin-right: auto;
         }
         .grid {
+            width: auto;
             display: grid;
-            gap: 15px;
+            gap: 10px;
         }
         .introduce {
             grid-template-columns: max-content 1fr ;
             /* align-items: center; */
         }
         .intro__img {
-            width: 300px;
-            height: 400px;
+            padding-top: 10%;
+            width: 80%;
+            height: 200px;
             border-radius: 50%;
             order: 1;
             justify-self: center;
         }
         .intro__ment {
+            width: 300px;
             grid-column: initial;
         }
 
-        @media screen and (max-width: 500px) {
+        /* @media screen and (max-width: 500px) {
            .container {
                display: auto ;
-        } 
-        }
+        }  
+        }*/
     </style>
 </head>
 <body>
-    <div class="introduce__container container grid font">
+    <div class="introduce__container container font">
         <div class="introduce grid">
          
             <div class="intro__img">
@@ -52,19 +55,22 @@
             </div>
 
             <div class="intro__ment">
-                <h1><b>미니멀리즘</b>을 추구합니다.</h1>
-                <p><b>•</b>단순하지만 무게감있어야 합니다.</p>
-                <p><b>•</b>부족해보이지만 필요한건 다 있어야합니다.</p>
-                <p><b>•</b>정교한 필요함을 위해 화려한 불필요함을 최소화합니다.</p>
-                <p><b>•</b></p>
+                <h1>미니멀리즘<br>을 추구합니다.</h1>
+                <p><b>•</b> 단순하지만 무게감있게</p>
+                <p><b>•</b> 자칫 부족해보여도 필수요소는 꽉찬</p>
+                <p><b>•</b> 정교한 필요함을 위해 화려한 불필요함을 최소화</p>
             </div>
 
         </div>
-        <div class="more">
+         <div class="more">
             <div class="intro__subment">
-               <h1>자세히...</h1>
-               <h2>이 공간에 제 소개와 생각을 담겠습니다. </h2>
-           </div>
+               <h2>방향성에 대해</h2>
+               <!--<p>시대는 끝없이 진화하고 트렌드는 빠르게 바뀝니다.
+                  대다수가 스마트폰을 소지하며, 시간장소에 제약없이 친목모임,쇼핑,대출이 가능합니다.
+                  이렇듯 모바일앱의 비중이 늘어감에 따라 저또한 웹사이트 구상에 모바일버전까지 고민하는
+                  습관이 생겼습니다. 유저의 특성 및 눈높이에 맞춘 
+                    </p>-->
+           </div> 
         </div>
     </div>
 </body>
